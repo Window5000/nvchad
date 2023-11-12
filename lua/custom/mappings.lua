@@ -13,5 +13,14 @@ M.dap = {
     }
   }
 }
+M.undotree = {
+  plugin = true,
+  n = {
+    ["<leader><F5>"] = {
+      "<cmd> UndotreeToggle <CR>",
+      "Toggle Undotree",
+    }
+  }
+}
 
 return M

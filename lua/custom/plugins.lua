@@ -1,5 +1,12 @@
 local plugins = {
   {
+    "mbbill/undotree",
+    config = function (_, _)
+      require("core.utils").load_mappings("undotree")
+    end,
+    event = "VeryLazy",
+  },
+  {
     "jiriks74/presence.nvim",
     event = "UIEnter",
     config = function ()
