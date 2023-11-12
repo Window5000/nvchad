@@ -1,5 +1,14 @@
 local plugins = {
   {
+    "jiriks74/presence.nvim",
+    event = "UIEnter",
+    config = function ()
+      require("presence").setup({
+        neovim_image_text = "hello",
+      })
+    end,
+  },
+  {
     "Civitasv/cmake-tools.nvim",
     event = "VeryLazy",
   },
