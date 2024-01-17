@@ -1,5 +1,11 @@
 local plugins = {
   {
+    "wuelnerdotexe/vim-astro",
+    ft = {
+      "astro"
+    }
+  },
+  {
     "mbbill/undotree",
     config = function (_, _)
       require("core.utils").load_mappings("undotree")
@@ -77,8 +83,36 @@ local plugins = {
         "cmake-language-server",
         "clang-format",
         "codelldb",
+        "typescript-language-server",
+        "tailwindcss-language-server",
+        "astro-language-server",
+        "vue-language-server",
+        "rust-analyzer",
       }
     }
-  }
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "astro",
+      "vue",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      "lua",
+      "javascript",
+      "typescript",
+      "tsx",
+    }
+  },
 }
 return plugins
